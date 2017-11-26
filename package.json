@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "airtable": "^0.5.0",
     "aor-postgrest-client": "^0.1.0",
     "bluebird": "^3.5.1",
     "good": "^7.3.0",
