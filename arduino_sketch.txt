@@ -1,0 +1,45 @@
+let ids = [];
+
+const int motorPin = 10;
+const int idPin = 12;
+const int ledPin = 13;
+const int speakerPin = 14;
+
+const int green = 1;
+const int yellow = 2;
+const int red = 3;
+
+void unlockDoor(){
+
+}
+
+void handleScan(){
+	idNum = digitalRead(idPin);
+	if (inList(idNum, ids)){
+		unlockDoor();
+	}
+	else{
+		digitalWrite(ledPin, yellow);
+		bool accept = get('/authenticate/'+idNum);
+		if (accept){
+			unlockDoor();
+		}
+		else{
+			rejectUnlock();
+		}
+	}
+
+}
+
+
+void setup(){
+	attachInterrupt(0, pin_ISR, CHANGE);
+}
+
+void loop(){
+	int res = get('/ids');
+	if (!res.error)
+		ids = new_ids;
+	delay(1000*60*5)
+
+}
