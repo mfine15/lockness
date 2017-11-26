@@ -20,6 +20,7 @@
     "hapi-es7-async-handler": "^1.0.11",
     "hapi-pagination": "^1.22.0",
     "hapi-set-header": "^1.0.2",
+    "pm2": "^2.8.0",
     "sqlite3": "^3.1.13"
   }
 }
